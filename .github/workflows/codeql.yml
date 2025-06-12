@@ -39,6 +39,8 @@ jobs:
       actions: read
       contents: read
 
+      pull-requests: write
+
     strategy:
       fail-fast: false
       matrix:
