@@ -5,7 +5,19 @@
 
 version: 2
 updates:
+   # npm dependencies
   - package-ecosystem: "npm"
-    directory: "/" # Location of package manifests
+    directory: "/src/ContosoTraders.Ui.Website"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps(ui)"
+  # NuGet dependencies
+  - package-ecosystem: "nuget"
+    directory: "/src"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps(api)"
